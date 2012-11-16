@@ -478,7 +478,9 @@ A commercial use license is available from Genivia, Inc., contact@genivia.com
 #  define SOAP_ULONG_FORMAT "%lu"
 # else
 /* Default assumptions for supported functions */
-#  define HAVE_SNPRINTF
+#  ifndef HAVE_SNPRINTF 
+#   define HAVE_SNPRINTF
+#  endif
 #  define HAVE_STRRCHR
 #  define HAVE_STRTOD
 #  define HAVE_SSCANF
@@ -488,8 +490,12 @@ A commercial use license is available from Genivia, Inc., contact@genivia.com
 #  define HAVE_FTIME
 #  define HAVE_RAND_R
 #  define HAVE_GETHOSTBYNAME_R
-#  define HAVE_GMTIME_R
-#  define HAVE_LOCALTIME_R
+#  ifndef HAVE_GMTIME_R
+#   define HAVE_GMTIME_R
+#  endif
+#  ifndef HAVE_LOCALTIME_R
+#   define HAVE_LOCALTIME_R
+#  endif
 #  ifdef MB_LEN_MAX
 #   define HAVE_WCTOMB
 #   define HAVE_MBTOWC
