@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.5)
-include(flags OPTIONAL)
 project(gsoap)
+include(flags OPTIONAL)
 set(lib_name gsoap)
 #######################################
 # library sources
