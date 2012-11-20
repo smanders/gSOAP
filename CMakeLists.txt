@@ -12,3 +12,7 @@ source_group("" FILES ${${lib_name}_libsrcs})
 #######################################
 # library
 add_library(${lib_name} STATIC ${${lib_name}_libsrcs})
+#######################################
+# install
+install(TARGETS ${lib_name} DESTINATION lib)
+install(FILES gsoap/stdsoap2.h DESTINATION include/gsoap)
