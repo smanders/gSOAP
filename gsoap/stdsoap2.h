@@ -51,6 +51,11 @@ A commercial use license is available from Genivia, Inc., contact@genivia.com
 --------------------------------------------------------------------------------
 */
 
+/* SDL HACK: ignore warnings from gcc >= 4.8 */
+#if (__GNUC__ >= 4) && (__GNUC_MINOR__ >= 8)
+# pragma GCC system_header
+#endif
+
 #ifdef WITH_SOAPDEFS_H
 # include "soapdefs.h"		/* include user-defined stuff */
 #endif
