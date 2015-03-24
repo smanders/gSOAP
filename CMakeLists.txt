@@ -20,5 +20,4 @@ install(TARGETS ${lib_name} EXPORT ${PROJECT_NAME}-targets
   ARCHIVE DESTINATION lib${NUMBITS}
   )
 install(FILES gsoap/stdsoap2.h DESTINATION include/gsoap)
-install(FILES usexp-${PROJECT_NAME}-config.cmake DESTINATION share/cmake)
 install(EXPORT ${PROJECT_NAME}-targets DESTINATION lib${NUMBITS}/cmake)
